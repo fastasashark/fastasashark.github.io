@@ -8,6 +8,7 @@
 <body>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 	<script>
+	/*
 		$.ajax({
 			url: 'http://a0810590.xsph.ru/api.php',
 			//type: 'POST',
@@ -29,6 +30,12 @@
                 alert("error");
             }
 		});
+	*/
+		try {
+		  await fetch('http://a0810590.xsph.ru/api.php');
+		} catch(err) {
+		  alert(err);
+		}
 	</script>
 </body>
 </html>
