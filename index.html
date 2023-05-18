@@ -5,6 +5,17 @@
   <title>Индекс.хтмл</title>  
 </head>
 <body>
-
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+	<script>
+		$.ajax({
+			url: 'http://a0810590.xsph.ru/api.php',
+			method: 'get',
+			dataType: 'json',
+			data: {text: 'Текст'},
+			success: function(data){
+				console.log(data);
+			}
+		});
+	</script>
 </body>
 </html>
