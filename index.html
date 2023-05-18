@@ -31,11 +31,12 @@
             }
 		});
 	*/
-		try {
-		  await fetch('http://a0810590.xsph.ru/api.php');
-		} catch(err) {
-		  alert(err);
-		}
+		let response = await fetch('http://a0810590.xsph.ru/api.php', {
+		  method: 'GET',
+		  headers: {
+			'Content-Type': 'application/json'
+		  }
+		});
 	</script>
 </body>
 </html>
