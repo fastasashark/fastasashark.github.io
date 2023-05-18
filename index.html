@@ -10,10 +10,14 @@
 	<script>
 		$.ajax({
 			url: 'http://a0810590.xsph.ru/api.php',
+			//type: 'POST',
 			method: 'get',
 			headers: {
 				"accept": "application/json",
 				"Access-Control-Allow-Origin":"*"
+			},
+			xhrFields: {
+				withCredentials: true
 			},
 			crossDomain: true,
 			dataType: 'json',
