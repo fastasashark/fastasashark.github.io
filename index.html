@@ -10,6 +10,10 @@
 		$.ajax({
 			url: 'http://a0810590.xsph.ru/api.php',
 			method: 'get',
+			headers: {
+				"accept": "application/json",
+				"Access-Control-Allow-Origin":"*"
+			},
 			crossDomain: true,
 			dataType: 'json',
 			data: {text: 'Текст'},
