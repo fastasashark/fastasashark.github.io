@@ -70,8 +70,8 @@ let alphabet = [
 let timeout = 1000;
 let pix = 50;
 let m = 20;
-let n = 10;
-let number = 10;
+let n = 15;
+let number = 16;
 
 let empty_cell = {
     width: pix,
@@ -82,7 +82,7 @@ let empty_cell = {
 let border_cell = {
     width: pix,
     height: pix,
-    color: '#faf'
+    color: '#000'
 };
 
 let map = Array.from({length: m * n}, (e, i) => 0);
@@ -243,8 +243,13 @@ function run() {
     for (let i = 0; i < n; i++) {
         for (let j = 0; j < m; j++) {
             let index = i * m + j;
-            map[index] = (index in new_cells) ? new_cells[index] : 0;
 
+            if (index in new_cells) {
+                map[index] = new_cells[index]
+            }
+            else {
+                map[index] = (i == 0 || i == n - 1 || j == 0 || j == m - 1) ? 1 : 0;
+            }
         }
     }
 }
