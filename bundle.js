@@ -235,9 +235,9 @@ function run() {
     console.info(index,direction);
                 cell.direction = direction;
                 cells[cell_name] = cell;
-
+  new_cells[index] = cell_name;
             }
-            new_cells[index] = cell_name;
+          
         }
     }
     for (let i = 0; i < n; i++) {
