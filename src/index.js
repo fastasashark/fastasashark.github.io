@@ -6,9 +6,9 @@ let alphabet = [
 
 let timeout = 1000;
 let pix = 50;
-let m = 10;
+let m = 20;
 let n = 10;
-let number = 1;
+let number = 10;
 
 let empty_cell = {
     width: pix,
@@ -19,7 +19,7 @@ let empty_cell = {
 let border_cell = {
     width: pix,
     height: pix,
-    color: '#000'
+    color: '#faf'
 };
 
 let map = Array.from({length: m * n}, (e, i) => 0);
@@ -119,14 +119,13 @@ function render() {
 }
 
 function run() {
-    let new_map = [];
+    let new_cells = [];
     for (let i = 0; i < n; i++) {
         for (let j = 0; j < m; j++) {
             let index = i * m + j;
             let cell_name = map[index];
 
             if (cell_name != 0 && cell_name != 1) {
-                new_map[index] = 0;
                 let cell = cells[cell_name];
                 let direction = Object.hasOwn(cell, 'direction') ? cell.direction : Math.round(Math.random() * 3);
 
@@ -169,15 +168,22 @@ function run() {
                         break;
                 }
 
-    console.info(index,direction);
+
                 cell.direction = direction;
                 cells[cell_name] = cell;
+                new_cells[index] = cell_name;
 
             }
-            new_map[index] = cell_name;
+            
         }
     }
-    map = new_map;
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < m; j++) {
+            let index = i * m + j;
+            map[index] = (index in new_cells) ? new_cells[index] : 0;
+
+        }
+    }
 }
 
 init();
