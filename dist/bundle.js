@@ -250,7 +250,6 @@ setInterval(function() {
 
             
 }, timeout);
-
 })();
 
 /******/ })()
