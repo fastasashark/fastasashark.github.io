@@ -68,10 +68,10 @@ let alphabet = [
 ];
 
 let timeout = 1000;
-let pix = 50;
-let m = 20;
-let n = 15;
-let number = 16;
+let pix = 20;
+let m = 40;
+let n = 30;
+let number = 50;
 
 let empty_cell = {
     width: pix,
