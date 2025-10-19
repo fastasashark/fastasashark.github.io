@@ -69,9 +69,9 @@ let alphabet = [
 
 let timeout = 1000;
 let pix = 20;
-let m = 40;
-let n = 30;
-let number = 50;
+let m = 50;
+let n = 40;
+let number = 100;
 
 let empty_cell = {
     width: pix,
