@@ -5,9 +5,9 @@ let alphabet = [
 ];
 
 let timeout = 500;
-let pix = 15;
-let m = 100;
-let n = 60;
+let pix = 25;
+let m = 80;
+let n = 40;
 let number = 1000;
 
 let empty_cell = {
