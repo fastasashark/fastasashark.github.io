@@ -1,0 +1,1 @@
+{"version":3,"file":"main.css","mappings":"AAGA,KACE,wBAJW,CAKX,6BAIF,SACE,qBATY,C","sources":["webpack://sass/./src/styles.scss"],"sourcesContent":["$main-color: #e7d2b7;\n$frame-color: #fff;\n\nbody {\n  background-color: $main-color;\n  font-family: Arial, sans-serif;\n}\n\n\n#program {\n  background-color: $frame-color;\n\n}"],"names":[],"sourceRoot":""}
