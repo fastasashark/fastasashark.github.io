@@ -6,8 +6,8 @@ let alphabet = [
 
 let timeout = 500;
 let pix = 25;
-let m = 80;
-let n = 40;
+let m = 60;
+let n = 30;
 let number = 1000;
 
 let empty_cell = {
